@@ -21,7 +21,7 @@ export default function Partnership ({ data }: PartnershipProps) {
                         {data.map((item, index) => (
                             <div className="" key={index}>
                                 <div className='items-center text-center bg-white border border-gray-400 py-2 px-4 rounded text-black font-medium lg:m-5 m-2 lg:w-40'>
-                                    <Image 
+                                    <img 
                                         src={item.img_parthership}
                                         alt=""
                                         width={75}

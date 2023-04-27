@@ -34,7 +34,7 @@ export default function Product ({ data }: ProductProps) {
                             <h1 className="lg:text-3xl text-xl font-bold text-center">OUR PRODUCTS</h1>
                             <div className="lg:flex items-center justify-center panjang" id="#home">
                                 <div className="lg:w-1/2 lg:pl-10 text-center">
-                                    <Image 
+                                    <img 
                                         src={data[currentIndex].imgurl} 
                                         alt={data[currentIndex].title} 
                                         width={500}

@@ -20,8 +20,8 @@ export default function Industries () {
                                 <p className="text-end text-sm lg:text-md mx-5">We are have strong experience in mining industry. Development of extend custom system based on mining&rsquo;s best practice.</p>
                             </div>
                             <div className="w-1/2 text-center">
-                                <Image 
-                                    src="/images/mining.png"
+                                <img 
+                                    src="./images/mining.png"
                                     alt=""
                                     width={100}
                                     height={100}
@@ -35,8 +35,8 @@ export default function Industries () {
                                 <p className="text-end text-sm lg:text-md mx-5">We provide the best solutions in manufacturing industry, complete with custom expertise based on your needs.</p>
                             </div>
                             <div className="w-1/2 text-center">
-                                <Image 
-                                    src="/images/manufacturing.png"
+                                <img 
+                                    src="./images/manufacturing.png"
                                     alt=""
                                     width={100}
                                     height={100}
@@ -46,8 +46,8 @@ export default function Industries () {
                         </div>
                     </div>
                     <div className="w-full text-center">
-                        <Image 
-                            src="/images/img_center_industri.png"
+                        <img 
+                            src="./images/img_center_industri.png"
                             alt=""
                             width={150}
                             height={150}
@@ -57,8 +57,8 @@ export default function Industries () {
                     <div>
                         <div className="flex justify-center h-[150px]">
                             <div className="w-1/2 text-center">
-                                <Image 
-                                    src="/images/shipping.png"
+                                <img 
+                                    src="./images/shipping.png"
                                     alt=""
                                     width={100}
                                     height={100}
@@ -72,8 +72,8 @@ export default function Industries () {
                         </div>
                         <div className="flex justify-center h-[150px]">
                             <div className="w-1/2 text-center">
-                                <Image 
-                                    src="/images/palm.png"
+                                <img 
+                                    src="./images/palm.png"
                                     alt=""
                                     width={100}
                                     height={100}

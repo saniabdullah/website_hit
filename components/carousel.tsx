@@ -35,12 +35,12 @@ export default function Carousel ({ data }: CarouselProps) {
                         <div className="pt-24 p-10 lg:p-24">
                             <div className="lg:flex items-center justify-center panjang" id="#home">
                                 <div className="lg:w-1/2 lg:pl-10 text-center">
-                                    <Image 
+                                    <img 
                                         src={data[currentIndex].imgurl} 
                                         alt={data[currentIndex].title} 
                                         width={500}
                                         height={500}
-                                        className="h-full w-full object-cover lg:object-none lg:h-auto"
+                                        // className="h-full w-full object-cover lg:object-none lg:h-auto"
                                     />
 
                                     <button

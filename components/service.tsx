@@ -24,7 +24,7 @@ export default function Service ({ data }: ServiceProps) {
                     {data.map((item, index) => (
                         <div key={index} className="flex md:flex-col md:w-1/2 lg:w-1/4">
                             <div className='bg-white border border-gray-400 py-2 px-4 rounded-full text-black font-medium my-5 mx-auto w-1/3 md:w-40'>
-                                <Image 
+                                <img 
                                     src={item.img_url}
                                     alt=""
                                     width={75}

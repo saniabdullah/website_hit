@@ -23,9 +23,9 @@ export default function Navbar () {
             <div className="flex lg:flex-1">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
-                <Image
+                <img
                   className="h-16 w-auto"
-                  src="/images/logo.png"
+                  src="./images/logo.png"
                   alt=""
                   width={50}
                   height={50}
@@ -61,9 +61,9 @@ export default function Navbar () {
               <div className="flex items-center justify-between">
                 <a href="#" className="-m-1.5 p-1.5">
                   <span className="sr-only">Your Company</span>
-                  <Image
+                  <img
                     className="h-16 w-auto"
-                    src="/images/logo.png"
+                    src="./images/logo.png"
                     alt=""
                     width={50}
                     height={50}
