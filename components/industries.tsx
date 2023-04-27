@@ -17,7 +17,7 @@ export default function Industries () {
                         <div className="flex justify-center lg:h-[150px]">
                             <div className="w-2/3">
                                 <p className="text-end mt-4 lg:text-lg text-sm font-bold mx-5">Mining Industry</p>
-                                <p className="text-end text-sm lg:text-md mx-5">We are have strong experience in mining industry. Development of extend custom system based on mining's best practice.</p>
+                                <p className="text-end text-sm lg:text-md mx-5">We are have strong experience in mining industry. Development of extend custom system based on mining&rsquo;s best practice.</p>
                             </div>
                             <div className="w-1/2 text-center">
                                 <Image 
