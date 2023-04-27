@@ -22,6 +22,7 @@
     "autoprefixer": "10.4.14",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
+    "export": "^0.1.337",
     "framer-motion": "^6.5.1",
     "next": "13.3.0",
     "next-sanity": "^3.1.3",
