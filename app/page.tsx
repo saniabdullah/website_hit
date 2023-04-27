@@ -1,124 +1,100 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
+import Carousel from '@/components/carousel'
+import Navbar from '@/components/navbar'
+import Partnership from '@/components/partnership'
+import Client from '@/components/client'
+import Service from '@/components/service'
+import Product from '@/components/product'
+import Footer from '@/components/footer'
+import Partners from '@/components/partners'
+import Contact from '@/components/contact'
+import Industries from '@/components/industries'
+import Gallery from '@/components/gallery'
+
+import { Roboto } from 'next/font/google'
+import { motion } from 'framer-motion';
+
+const font = Roboto({
+  subsets: ['latin'],
+  weight: '400'
+})
 
 const inter = Inter({ subsets: ['latin'] })
 
+const carousel_data = [
+  {imgurl: "/images/image1.png", title: "Make IT Simple", desc: "End to end solution for digitizing business processes easily"},
+  {imgurl: "/images/image2.png", title: "Software Development", desc: "We are proud of our experience on custom software development for various industries, and our clients mainly from mining industries in Indonesia."},
+  {imgurl: "/images/image3.png", title: "IT Infrastructure", desc: "More than 10 years of experience managing infrastructure projects: internet network, server, CCTV"},
+];
+
+const partnership_data = [
+  {img_parthership: "/images/sap.png"},
+  {img_parthership: "/images/odoo.png"},
+  {img_parthership: "/images/epicor.png"},
+  {img_parthership: "/images/kissflow.png"},
+  {img_parthership: "/images/micro.png"},
+  {img_parthership: "/images/huawei.png"},
+  {img_parthership: "/images/cloud.png"},
+];
+
+const client_data = [
+  {img_client:  "/images/hg.png"},
+  {img_client:  "/images/bre.png"},
+  {img_client:  "/images/hrs_logo.png"},
+  {img_client:  "/images/tpe.png"},
+  {img_client:  "/images/pasar_jaya.png"},
+  {img_client:  "/images/ruang_guru.png"},
+  {img_client:  "/images/t4t.png"},
+  {img_client:  "/images/ktc.png"},
+  {img_client:  "/images/prager.png"},
+];
+
+const service_data =[
+  {img_url: "/images/it_consulting_red.png", title: "IT CONSULTING", desc: "We provide the best advice to build your technology"},
+  {img_url: "/images/erp_solutions_red.png", title: "ERP SOLUTIONS", desc: "Providing a variety of ERP solutions based on your needs."},
+  {img_url: "/images/data_analisys_red.png", title: "DATA ANALYTICS", desc: "Business platform Intelligence to present dashboards and reports automatically"},
+  {img_url: "/images/software_dev_red.png", title: "SOFTWARE DEVELOPMENT", desc: "Experienced in designing custom website and mobile applications"}
+]
+
+const product_data = [
+  {imgurl: "/images/Weighbridge.png", title: "Weighbridge", sub_title: 'Our Own Product', desc: "Integrated Application to ERP System. Simplify the process of tracking data by integrating weighing equipment in the field and ERP system. Now, real time data can be accesed in the back office."},
+  {imgurl: "/images/cms.png", title: "Coal Monitoring System", sub_title: 'Our Own Product',  desc: "CMS helps you to develop & impelement operational target, executing cost reduction and seamless operational process. Comprehensive real time monitoring for a better decision, quickly and precisely."},
+  {imgurl: "/images/e_bkm.png", title: "E-BKM", sub_title: 'Our Own Product', desc: "Electronic Buku Kerja Mandor (E-BKM) is an application to record the work process and work results of the palm oil industry. Track & trace the activities of field workers starting activities from planting, seeding, harvesting, and distributing palm fruit."},
+  {imgurl: "/images/attendance.png", title: "HG Attendance", sub_title: 'Our Own Product', desc: "An mobile attendance to record flexible employee presence. Verified presence data with GPS tracking and face recognition"},
+  {imgurl: "/images/harp.png", title: "HARP", sub_title: 'Our Own Product', desc: "Hasnur Agriculture Resources Planning (HARP) is an application for recording field activities that produce output payroll calculations"},
+  {imgurl: "/images/eis.png", title: "Executive Information System", sub_title: 'Our Own Product', desc: "Executive Information System (EIS) is an rapplication to produce executive reports on agribusiness activities."},
+];
+
+const partners_data =[
+  {img_url: "/images/sap_partner.png", desc: "SAP is the leading ERP among multinationals. SAP as a single solution accommodating end to end solutions. Starting from finance, HR, Operations, Supply Chain, and also Marketing."},
+  {img_url: "/images/odoo_partner.png", desc: "Odoo is a new coomer ERP with a fresh and user fiendly look. Odoo is suitable to be implemented from MSME businesses to multinational businesses."},
+  {img_url: "/images/epicor_partner.png", desc: "Epicor is an ERP system for automating & integrating workflows with strong points in Manufacturing. Epicor helps companies to calculate daily production costs in every workers. So that effectiveness can be done."},
+  {img_url: "/images/micro_partner.png", desc: "Business platform Intelligence to present dashboards and reports automatically"},
+  {img_url: "/images/kissflow_partner.png", desc: "Specialize in providing application low code no code which can help you to automate operation"}
+]
+
+const gallery_data =[
+  {imgurl: "/images/photo_1.png"},
+  {imgurl: "/images/photo_2.png"},
+  {imgurl: "/images/photo_3.png"},
+]
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+    <main className="flex min-h-screen flex-col items-center justify-between text-gray-600 font-sans">
+      {/* <div className={font.className}> */}
+        <Carousel data={carousel_data}/>
+        <Partnership data={partnership_data}/>
+        <Client data={client_data}/>
+        <Service data={service_data}/>
+        <Industries />
+        <Product data={product_data}/>
+        <Partners data={partners_data}/>
+        <Gallery data={gallery_data}/>
+        <Contact />
+        <Footer />
+      {/* </div> */}
     </main>
   )
 }
