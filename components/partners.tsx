@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image";
 import { motion } from 'framer-motion';
 
 type PartnerProps = {
@@ -19,7 +20,7 @@ export default function Partners ( {data} : PartnerProps ) {
                 <div className='flex flex-wrap justify-center items-center mb-10 pb-10'>
                     {data.map((item, index) => (
                         <div key={index} className="md:flex-col md:w-1/2 lg:w-1/3 py-4">
-                            <img 
+                            <Image 
                                 src={item.img_url}
                                 alt=""
                                 width={75}

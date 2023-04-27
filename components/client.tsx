@@ -1,5 +1,5 @@
 "use client"
-
+import Image from "next/image";
 import { motion } from 'framer-motion';
 
 
@@ -24,7 +24,7 @@ export default function Client ({data} : ClientProps) {
                         {data.map((item, index) => (
                             <div className="" key={index}>
                                 <div className='bg-white border border-gray-400 py-2 px-4 rounded text-black font-medium lg:m-5 m-2 lg:w-40'>
-                                <img 
+                                <Image 
                                     src={item.img_client}
                                     alt=""
                                     width={75}

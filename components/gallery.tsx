@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion } from 'framer-motion';
 
@@ -27,12 +28,18 @@ const Gallery = ({ data }: GalleryProps) => {
         <div className="product-detail-container mx-auto">
           <div>
               <div className='image-container'>
-                  <img src={data[currentIndex].imgurl} className='product-detail-image'/>
+                  <Image 
+                    width={500}
+                    height={520}
+                    src={data[currentIndex].imgurl} alt="" className='product-detail-image'/>
               </div>
               <div className='small-images-container'>
                   {data.map((item, i) => (
-                      <img 
+                      <Image 
+                          alt=""
                           src={item.imgurl}
+                          width={320}
+                          height={320}
                           className={i === currentIndex ? 
                               'small-image selected-image' :
                               'small-image'}

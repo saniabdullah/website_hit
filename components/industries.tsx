@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image";
 import { motion } from 'framer-motion';
 
 export default function Industries () {
@@ -19,7 +20,7 @@ export default function Industries () {
                                 <p className="text-end text-sm lg:text-md mx-5">We are have strong experience in mining industry. Development of extend custom system based on mining's best practice.</p>
                             </div>
                             <div className="w-1/2 text-center">
-                                <img 
+                                <Image 
                                     src="/images/mining.png"
                                     alt=""
                                     width={100}
@@ -34,7 +35,7 @@ export default function Industries () {
                                 <p className="text-end text-sm lg:text-md mx-5">We provide the best solutions in manufacturing industry, complete with custom expertise based on your needs.</p>
                             </div>
                             <div className="w-1/2 text-center">
-                                <img 
+                                <Image 
                                     src="/images/manufacturing.png"
                                     alt=""
                                     width={100}
@@ -45,7 +46,7 @@ export default function Industries () {
                         </div>
                     </div>
                     <div className="w-full text-center">
-                        <img 
+                        <Image 
                             src="/images/img_center_industri.png"
                             alt=""
                             width={150}
@@ -56,7 +57,7 @@ export default function Industries () {
                     <div>
                         <div className="flex justify-center h-[150px]">
                             <div className="w-1/2 text-center">
-                                <img 
+                                <Image 
                                     src="/images/shipping.png"
                                     alt=""
                                     width={100}
@@ -71,7 +72,7 @@ export default function Industries () {
                         </div>
                         <div className="flex justify-center h-[150px]">
                             <div className="w-1/2 text-center">
-                                <img 
+                                <Image 
                                     src="/images/palm.png"
                                     alt=""
                                     width={100}
