@@ -18,18 +18,16 @@ export default function Client ({data} : ClientProps) {
             transition={{ duration: 0.6 }}
         >
             <div className="">
-                <div className="px-10 lg:px-24 bg-neutral-100" id="#client">
-                    <h1 className="lg:text-3xl text-xl font-bold my-10 text-center pt-10">OUR CLIENT</h1>
-                    <div className='flex flex-wrap justify-center items-center mb-10 pb-10'>
+                <div className="lg:px-24mt-10 w-full bg-neutral-100 lg:px-20 px-4 py-2 shadow-md" id="">
+                    <h1 className="lg:text-3xl text-xl font-bold mx-auto text-center py-2 mt-7 mb-4">OUR CLIENT</h1>
+                    <div className='flex flex-wrap justify-center items-center'>
                         {data.map((item, index) => (
                             <div className="" key={index}>
-                                <div className='bg-white border border-gray-400 py-2 px-4 rounded text-black font-medium lg:m-5 m-2 lg:w-40'>
+                                <div className='text-black font-medium lg:m-5 m-2 lg:w-50'>
                                 <img 
                                     src={item.img_client}
                                     alt=""
-                                    width={75}
-                                    height={75}
-                                    className="mx-auto"
+                                    className="mx-auto w-20 h-14 lg:w-40 lg:h-28"
                                 />
                                 </div>
                             </div>

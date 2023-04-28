@@ -12,10 +12,10 @@ import Contact from '@/components/contact'
 import Industries from '@/components/industries'
 import Gallery from '@/components/gallery'
 
-import { Roboto } from 'next/font/google'
+import { Source_Sans_Pro } from 'next/font/google'
 import { motion } from 'framer-motion';
 
-const font = Roboto({
+const font = Source_Sans_Pro({
   subsets: ['latin'],
   weight: '400'
 })
@@ -42,8 +42,8 @@ const client_data = [
   {img_client:  "./images/hg.png"},
   {img_client:  "./images/bre.png"},
   {img_client:  "./images/hrs_logo.png"},
-  {img_client:  "./images/tpe.png"},
-  {img_client:  "./images/pasar_jaya.png"},
+  {img_client:  "./images/tpe-removebg.png"},
+  {img_client:  "./images/pasar_jaya-removebg.png"},
   {img_client:  "./images/ruang_guru.png"},
   {img_client:  "./images/t4t.png"},
   {img_client:  "./images/ktc.png"},
@@ -83,7 +83,7 @@ const gallery_data =[
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between text-gray-600 font-sans">
-      {/* <div className={font.className}> */}
+      <div className={font.className}>
         <Carousel data={carousel_data}/>
         <Partnership data={partnership_data}/>
         <Client data={client_data}/>
@@ -94,7 +94,7 @@ export default function Home() {
         <Gallery data={gallery_data}/>
         <Contact />
         <Footer />
-      {/* </div> */}
+      </div>
     </main>
   )
 }

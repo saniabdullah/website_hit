@@ -12,12 +12,13 @@ type PartnerProps = {
 
 export default function Partners ( {data} : PartnerProps ) {
     return (
-        <motion.div
-            whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
-            transition={{ duration: 0.6 }}
-        >
-            <div className="px-10 lg:px-24 bg-neutral-100 w-full my-4" id="">
-                <div className='flex flex-wrap justify-center items-center mb-10 pb-10'>
+        <div className="px-10 lg:px-24 bg-neutral-100 w-full my-4 shadow-md" id="">
+            <motion.div
+                whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
+                transition={{ duration: 0.6 }}
+            >
+
+                <div className='flex flex-wrap justify-center items-center mb-4 pb-10'>
                     {data.map((item, index) => (
                         <div key={index} className="md:flex-col md:w-1/2 lg:w-1/3 py-4">
                             <img 
@@ -33,8 +34,8 @@ export default function Partners ( {data} : PartnerProps ) {
                         </div>
                     ))}
                 </div>
-            </div>
 
-        </motion.div>
+            </motion.div>
+        </div>
     )
 }

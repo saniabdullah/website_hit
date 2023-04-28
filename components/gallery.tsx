@@ -19,15 +19,15 @@ const Gallery = ({ data }: GalleryProps) => {
 
   return (
     
-    <div className="w-full px-10 lg:px-24 min-h-screen">
+    <div className="w-full px-10 lg:px-24 lg:min-h-screen">
       <motion.div
         whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
         transition={{ duration: 0.6 }}
       >
-        <h1 className="lg:text-3xl text-xl font-bold my-10 text-center pt-10">ACTIVITY GALLERY</h1>
+        <h1 className="lg:text-3xl text-xl font-bold my-10 text-center">ACTIVITY GALLERY</h1>
         <div className="product-detail-container mx-auto">
           <div>
-              <div className='image-container'>
+              <div className='image-container shadow-lg'>
                   <img 
                     width={500}
                     height={520}
@@ -41,8 +41,8 @@ const Gallery = ({ data }: GalleryProps) => {
                           width={320}
                           height={320}
                           className={i === currentIndex ? 
-                              'small-image selected-image' :
-                              'small-image'}
+                              'small-image selected-image shadow-lg' :
+                              'small-image shadow-lg'}
                           key={i}
                           onMouseEnter={() => setCurrentIndex(i)}
                       />

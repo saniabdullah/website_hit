@@ -5,16 +5,16 @@ import { motion } from 'framer-motion';
 
 export default function Industries () {
     return (
-        <motion.div
-            whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
-            transition={{ duration: 0.6 }}
-        >
-            <div className="mt-10 w-full bg-neutral-100 lg:px-20 px-4 py-5">
-                <h1 className="lg:text-3xl text-xl py-2 font-bold mt-4 text-center">INDUSTRIES</h1>
+        <div className="w-full bg-neutral-100 lg:px-20 px-4 py-2 shadow-md">
+            <motion.div
+                whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
+                transition={{ duration: 0.6 }}
+            >
+                <h1 className="lg:text-3xl text-xl font-bold py-2 mt-4 text-center">INDUSTRIES</h1>
                 <p className="lg:text-lg text-md text-center">HIT Digital indonesia provides comprehensive services in various industries</p>
-                <div className="grid-1 grid gap-8 md:grid-cols-3 my-5">
+                <div className="grid-1 grid gap-8 md:grid-cols-3 mb-4">
                     <div>
-                        <div className="flex justify-center lg:h-[150px]">
+                        <div className="flex justify-center lg:min-[170px]">
                             <div className="w-2/3">
                                 <p className="text-end mt-4 lg:text-lg text-sm font-bold mx-5">Mining Industry</p>
                                 <p className="text-end text-sm lg:text-md mx-5">We are have strong experience in mining industry. Development of extend custom system based on mining&rsquo;s best practice.</p>
@@ -29,7 +29,7 @@ export default function Industries () {
                                 />
                             </div>
                         </div>
-                        <div className="flex justify-center h-[150px]">
+                        <div className="flex justify-center md:h-[220px] lg:h-[170px]">
                             <div className="w-2/3">
                                 <p className="text-end mt-4 lg:text-lg text-sm font-bold mx-5">Manufacturing Industry</p>
                                 <p className="text-end text-sm lg:text-md mx-5">We provide the best solutions in manufacturing industry, complete with custom expertise based on your needs.</p>
@@ -51,11 +51,11 @@ export default function Industries () {
                             alt=""
                             width={150}
                             height={150}
-                            className="h-full w-full object-cove hidden lg:block"
+                            className="h-full w-full object-cover hidden md:block"
                         />
                     </div>
                     <div>
-                        <div className="flex justify-center h-[150px]">
+                        <div className="flex justify-center lg:h-[170px]">
                             <div className="w-1/2 text-center">
                                 <img 
                                     src="./images/shipping.png"
@@ -70,7 +70,7 @@ export default function Industries () {
                                 <p className="text-start text-sm lg:text-md mx-5">Development of custom system website and mobile apps for shipping industry.</p>
                             </div>
                         </div>
-                        <div className="flex justify-center h-[150px]">
+                        <div className="flex justify-center lg:h-[170px]">
                             <div className="w-1/2 text-center">
                                 <img 
                                     src="./images/palm.png"
@@ -87,7 +87,8 @@ export default function Industries () {
                         </div>
                     </div>
                 </div>
-            </div>
-        </motion.div>
+            </motion.div>
+            
+        </div>
     );
 }

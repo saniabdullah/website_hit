@@ -25,12 +25,13 @@ export default function Product ({ data }: ProductProps) {
         <motion.div
             whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
             transition={{ duration: 0.6 }}
+            id="product"
         >
             <div>
                 {data.length && (
                     <>
-                    <div className="relative">
-                        <div className="pt-24 p-10 lg:p-24">
+                    <div className="relative" id="">
+                        <div className="px-4 pt-16 pb-10 lg:px-56">
                             <h1 className="lg:text-3xl text-xl font-bold text-center">OUR PRODUCTS</h1>
                             <div className="lg:flex items-center justify-center panjang" id="#home">
                                 <div className="lg:w-1/2 lg:pl-10 text-center">
