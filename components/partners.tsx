@@ -12,10 +12,11 @@ type PartnerProps = {
 
 export default function Partners ( {data} : PartnerProps ) {
     return (
-        <div className="px-10 lg:px-24 bg-neutral-100 w-full my-4 shadow-md" id="">
+        <div className="px-10 lg:px-24 w-full my-4 bg-neutral-100" id="partners">
             <motion.div
                 whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
                 transition={{ duration: 0.6 }}
+                className=""
             >
 
                 <div className='flex flex-wrap justify-center items-center mb-4 pb-10'>
@@ -26,7 +27,7 @@ export default function Partners ( {data} : PartnerProps ) {
                                 alt=""
                                 width={75}
                                 height={50}
-                                className="mx-auto py-3 w-2/3 md:w-40"
+                                className="mx-auto py-3 w-2/3 md:w-40 my-2 rounded-sm"
                             />
                             <div className="lg:w-full">
                                 <p className="text-center text-md lg:text-md mx-5">{item.desc}</p>

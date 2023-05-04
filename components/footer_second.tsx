@@ -1,8 +1,9 @@
 import Link from 'next/link'
 
-export default function Footer() {
+
+export default function FooterSecond() {
     return (
-        <footer className="bg-neutral-100 text-center dark:bg-neutral-600 dark:text-neutral-200 lg:text-left w-full">
+        <footer className="bg-white text-center dark:bg-neutral-600 dark:text-neutral-200 lg:text-left w-full">
             <div className="mx-16 py-10 text-center md:text-left">
                 <div className="grid-1 grid gap-8 lg:grid-cols-2">
                     

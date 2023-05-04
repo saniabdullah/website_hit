@@ -24,7 +24,7 @@ const Gallery = ({ data }: GalleryProps) => {
         whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
         transition={{ duration: 0.6 }}
       >
-        <h1 className="lg:text-3xl text-xl font-bold my-10 text-center">ACTIVITY GALLERY</h1>
+        <h1 className="lg:text-3xl text-xl font-extrabold my-10 text-center">Activity Gallery</h1>
         <div className="product-detail-container mx-auto">
           <div>
               <div className='image-container shadow-lg'>

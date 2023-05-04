@@ -30,9 +30,9 @@ export default function Product ({ data }: ProductProps) {
             <div>
                 {data.length && (
                     <>
-                    <div className="relative" id="">
-                        <div className="px-4 pt-16 pb-10 lg:px-56">
-                            <h1 className="lg:text-3xl text-xl font-bold text-center">OUR PRODUCTS</h1>
+                    <div className="relative" id="our_products">
+                        <div className="px-4 pt-10 pb-5 lg:px-56">
+                            <h1 className="lg:text-3xl text-xl font-extrabold text-center">Our Products</h1>
                             <div className="lg:flex items-center justify-center panjang" id="#home">
                                 <div className="lg:w-1/2 lg:pl-10 text-center">
                                     <img 
@@ -40,6 +40,7 @@ export default function Product ({ data }: ProductProps) {
                                         alt={data[currentIndex].title} 
                                         width={500}
                                         height={500}
+                                        className="mx-auto"
                                         // className="h-full w-full object-cover lg:object-none lg:h-auto"
                                     />
 
@@ -64,7 +65,7 @@ export default function Product ({ data }: ProductProps) {
                                 </div>
                                 <div className="lg:w-1/2 lg:pr-10 text-center">
                                     <h1 className="text-3xl mb-4">{data[currentIndex].sub_title}</h1>
-                                    <h1 className="text-3xl font-bold mb-4">{data[currentIndex].title}</h1>
+                                    <h1 className="text-3xl font-extrabold mb-4">{data[currentIndex].title}</h1>
                                     <p className="mb-4">{data[currentIndex].desc}</p>
                                     <button
                                         className="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-black opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-black hover:no-underline hover:opacity-90 hover:outline-none focus:text-black focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"

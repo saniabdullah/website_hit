@@ -1,20 +1,18 @@
 "use client"
 
-import Image from "next/image";
 import { useState } from "react";
 import { motion } from 'framer-motion';
+import Link from 'next/link'
 
-type CarouselProps = {
+type CarouselSapProps = {
     data: {
       imgurl: string;
       title: string;
       desc: string;
     }[];
 };
-  
 
-export default function Carousel ({ data }: CarouselProps) {
-
+const CarouselSap = ({ data }: CarouselSapProps) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const handleClick = (index : any) => {
         setCurrentIndex(index);
@@ -78,14 +76,10 @@ export default function Carousel ({ data }: CarouselProps) {
                                             </svg>
                                         </span>
                                     </button>
-                                    <div className="flex text-center lebar">
-                                        <a href="#kontak" className="bg-blue-700 hover:bg-blue-500 text-white font-extrabold py-2 rounded lg:my-5 my-2 w-1/2 shadow-lg">
-                                            Free Consultation
-                                        </a>
-
-                                        <a href="#kontak" className="bg-white border border-blue-400 py-2 px-4 rounded text-black font-medium hover:bg-blue-400 hover:text-white w-1/2 lg:m-5 m-2 shadow-lg">
-                                            Learn More
-                                        </a>
+                                    <div className="flex text-center justify-center md:justify-start">
+                                        <Link href="#kontak" className="bg-blue-700 hover:bg-blue-500 text-white font-extrabold py-2 rounded lg:my-5 my-2 w-2/3 md:w-1/2 shadow-lg">
+                                            Start Your Journey
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -97,3 +91,5 @@ export default function Carousel ({ data }: CarouselProps) {
         </motion.div>
     );
 }
+
+export default CarouselSap

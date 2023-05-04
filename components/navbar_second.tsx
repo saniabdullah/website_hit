@@ -5,13 +5,14 @@ import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Poppins } from 'next/font/google'
+import Link from 'next/link'
 
 
 const navigation = [
-  { name: 'Home', href: '#home' },
-  { name: 'About Us', href: '#partnership' },
-  { name: 'Product', href: '#product' },
-  { name: 'Career', href: '#kontak' },
+  { name: 'Home', href: '/' },
+  { name: 'About Us', href: '/' },
+  { name: 'Product', href: '/' },
+  { name: 'Career', href: '/' },
 ]
 
 const font = Poppins({
@@ -19,7 +20,7 @@ const font = Poppins({
   weight: '600'
 })
 
-export default function Navbar () {
+export default function NavbarSecond () {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -28,7 +29,7 @@ export default function Navbar () {
           <header className="fixed bg-white shadow-sm md:shadow-md inset-x-0 top-0 z-50">
             <nav className="flex items-center justify-between p-1 lg:px-24" aria-label="Global">
               <div className="flex lg:flex-1">
-                <a href="#" className="-m-1.5 p-1.5">
+                <Link href="/" className="-m-1.5 p-1.5">
                   <span className="sr-only">Your Company</span>
                   <img
                     className="h-16 w-auto"
@@ -37,7 +38,7 @@ export default function Navbar () {
                     width={50}
                     height={50}
                   />
-                </a>
+                </Link>
               </div>
               <div className="flex lg:hidden">
                 <button
@@ -51,15 +52,15 @@ export default function Navbar () {
               </div>
               <div className="hidden lg:flex lg:gap-x-12">
                 {navigation.map((item) => (
-                  <a key={item.name} href={item.href} className="text-sm font-bold leading-6 text-gray-600 hover:text-black">
+                  <Link key={item.name} href={item.href} className="text-sm font-bold leading-6 text-gray-600 hover:text-black">
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
               <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                <a href="#kontak" className="text-sm font-bold leading-6 text-gray-900">
+                <Link href="/" className="text-sm font-bold leading-6 text-gray-900">
                   Free Consulting <span aria-hidden="true">&rarr;</span>
-                </a>
+                </Link>
               </div>
             </nav>
             <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -98,14 +99,6 @@ export default function Navbar () {
                         </a>
                       ))}
                     </div>
-                    {/* <div className="py-6">
-                      <a
-                        href="#"
-                        className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-bold leading-7 text-gray-900 hover:bg-gray-50"
-                      >
-                        Log in
-                      </a>
-                    </div> */}
                   </div>
                 </div>
               </Dialog.Panel>

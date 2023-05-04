@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import Carousel from '@/components/carousel'
 import Navbar from '@/components/navbar'
 import Partnership from '@/components/partnership'
@@ -12,15 +11,22 @@ import Contact from '@/components/contact'
 import Industries from '@/components/industries'
 import Gallery from '@/components/gallery'
 
-import { Source_Sans_Pro } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import { motion } from 'framer-motion';
+import Testing from '@/components/testing'
+import CarouselSap from '@/components/sap_page'
+import SecoundSectionSapPage from '@/components/sap_second_page'
+import EpicorPage from '@/components/epicor_page'
+import EpicorSecondPage from '@/components/epicor_second_page'
+import MicrostrategyPage from '@/components/microstrategy_page'
+import OdooPage from '@/components/odoo_page'
+import OdooSecondPage from '@/components/odoo_second_page'
 
-const font = Source_Sans_Pro({
+const font = Poppins({
   subsets: ['latin'],
   weight: '400'
 })
 
-const inter = Inter({ subsets: ['latin'] })
 
 const carousel_data = [
   {imgurl: "./images/image1.png", title: "Make IT Simple", desc: "End to end solution for digitizing business processes easily"},
@@ -51,10 +57,10 @@ const client_data = [
 ];
 
 const service_data =[
-  {img_url: "./images/it_consulting_red.png", title: "IT CONSULTING", desc: "We provide the best advice to build your technology"},
-  {img_url: "./images/erp_solutions_red.png", title: "ERP SOLUTIONS", desc: "Providing a variety of ERP solutions based on your needs."},
-  {img_url: "./images/data_analisys_red.png", title: "DATA ANALYTICS", desc: "Business platform Intelligence to present dashboards and reports automatically"},
-  {img_url: "./images/software_dev_red.png", title: "SOFTWARE DEVELOPMENT", desc: "Experienced in designing custom website and mobile applications"}
+  {img_url: "./images/it_consulting_red.png", title: "It Consulting", desc: "We provide the best advice to build your technology"},
+  {img_url: "./images/erp_solutions_red.png", title: "Erp Solutions", desc: "Providing a variety of ERP solutions based on your needs."},
+  {img_url: "./images/data_analisys_red.png", title: "Data Analytic", desc: "Business platform Intelligence to present dashboards and reports automatically"},
+  {img_url: "./images/software_dev_red.png", title: "Software Development", desc: "Experienced in designing and developing customized applications and mobile applications"}
 ]
 
 const product_data = [
@@ -75,15 +81,15 @@ const partners_data =[
 ]
 
 const gallery_data =[
-  {imgurl: "./images/photo_1.png"},
-  {imgurl: "./images/photo_2.png"},
-  {imgurl: "./images/photo_3.png"},
+  {imgurl: "./images/photo_1.webp"},
+  {imgurl: "./images/photo_2.webp"},
+  {imgurl: "./images/photo_3.webp"},
 ]
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between text-gray-600 font-sans">
-      <div className={font.className}>
+    <main className={`flex min-h-screen flex-col items-center justify-between text-gray-600 ${font.className}`}>
+        <Navbar />
         <Carousel data={carousel_data}/>
         <Partnership data={partnership_data}/>
         <Client data={client_data}/>
@@ -94,7 +100,6 @@ export default function Home() {
         <Gallery data={gallery_data}/>
         <Contact />
         <Footer />
-      </div>
     </main>
   )
 }

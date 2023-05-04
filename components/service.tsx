@@ -18,7 +18,7 @@ export default function Service ({ data }: ServiceProps) {
             transition={{ duration: 0.6 }}
         >
             <div className="w-full lg:px-20 px-4 py-2">
-                <h1 className="lg:text-3xl text-xl font-bold text-center py-2 mt-7">OUR SERVICES</h1>
+                <h1 className="lg:text-3xl text-xl font-bold text-center py-2 mt-7">Our Services</h1>
                 <p className="lg:text-lg text-md text-center mb-4">End to end solution for full-cycle IT needed</p>
                 <div className="flex flex-wrap items-center mb-4 pb-7 justify-evenly">
                     {data.map((item, index) => (
