@@ -29,7 +29,7 @@ export default function Partnership ({ data }: PartnershipProps) {
     };
 
     return(
-        <div className="w-full lg:px-20 lg:py-10 px-4 py-2 relative h-[250px] md:min-h-[450px]">
+        <div className="w-full lg:px-20 lg:py-10 px-4 py-2 relative h-[250px] md:min-h-[450px]" id='partnership'>
             <motion.div
                 whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
                 transition={{ duration: 0.6 }}
