@@ -4,7 +4,7 @@ import React from 'react'
 
 const EpicorSecondPage = () => {
   return (
-    <div className='w-full py-10 lg:px-56 bg-neutral-100'>
+    <div className='w-full py-10 lg:px-56 bg-[#EFF2F5]'>
         <div className="flex flex-col justify-between">
             <div className='m-2 flex-auto w-full'>
                 <img 

@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import FooterSecond from "@/components/footer_second";
 import NavbarSecond from "@/components/navbar_second";
 import CarouselSap from "@/components/sap_page";
@@ -27,11 +28,11 @@ const second_section_sap_page_data = [
 
 export default function Home() {
     return (
-        <main className={`flex min-h-screen flex-col items-center justify-between text-gray-600 ${font.className}`}>
+        <main className={`flex min-h-screen flex-col items-center justify-between text-[#204E62] ${font.className}`}>
             <NavbarSecond />
             <CarouselSap data={carousel_sap_data} />
             <SecoundSectionSapPage data={second_section_sap_page_data} />
-            <FooterSecond />
+            <Footer />
         </main>
     )
 }

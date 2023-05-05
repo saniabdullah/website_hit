@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import FooterSecond from "@/components/footer_second";
 import NavbarSecond from "@/components/navbar_second";
 import OdooPage from "@/components/odoo_page";
@@ -20,7 +21,7 @@ export default function Home() {
             <NavbarSecond />
             <OdooPage data={odoo_page_data}/>
             <OdooSecondPage />
-            <FooterSecond />
+            <Footer />
         </main>
     )
 }

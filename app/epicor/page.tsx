@@ -1,5 +1,6 @@
 import EpicorPage from "@/components/epicor_page";
 import EpicorSecondPage from "@/components/epicor_second_page";
+import Footer from "@/components/footer";
 import FooterSecond from "@/components/footer_second";
 import NavbarSecond from "@/components/navbar_second";
 import { Poppins } from 'next/font/google'
@@ -17,7 +18,7 @@ export default function Home() {
             <NavbarSecond />
             <EpicorPage />
             <EpicorSecondPage />
-            <FooterSecond />
+            <Footer />
         </main>
     )
 }

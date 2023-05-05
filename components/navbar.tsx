@@ -42,7 +42,7 @@ export default function Navbar () {
               <div className="flex lg:hidden">
                 <button
                   type="button"
-                  className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                  className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-[#204E62]"
                   onClick={() => setMobileMenuOpen(true)}
                 >
                   <span className="sr-only">Open main menu</span>
@@ -51,14 +51,14 @@ export default function Navbar () {
               </div>
               <div className="hidden lg:flex lg:gap-x-12">
                 {navigation.map((item) => (
-                  <a key={item.name} href={item.href} className="text-sm font-bold leading-6 text-gray-600 hover:text-black">
+                  <a key={item.name} href={item.href} className="text-sm font-bold leading-6 text-[#204E62]hover:text-black">
                     {item.name}
                   </a>
                 ))}
               </div>
               <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                <a href="#kontak" className="text-sm font-bold leading-6 text-gray-900">
-                  Free Consulting <span aria-hidden="true">&rarr;</span>
+                <a href="#kontak" className="bg-[#204E62] text-sm font-bold leading-6 text-white py-2 px-4 rounded-md shadow-lg hover:bg-[#405a54]">
+                  Free Consulting
                 </a>
               </div>
             </nav>

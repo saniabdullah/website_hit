@@ -75,7 +75,7 @@ const customization_data = [
 
 const OdooSecondPage = () => {
   return (
-    <div className="w-full lg:px-20 px-4 pb-10 md:pb-10 bg-neutral-100">
+    <div className="w-full lg:px-20 px-4 pb-10 md:pb-10 bg-[#EFF2F5]">
         <div className='flex flex-col md:flex-row md:my-10 py-5'>
             <div className='flex-auto w-full md:w-1/4'>
                 <img 

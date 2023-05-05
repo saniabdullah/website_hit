@@ -79,11 +79,11 @@ export default function Carousel ({ data }: CarouselProps) {
                                         </span>
                                     </button>
                                     <div className="flex text-center lebar">
-                                        <a href="#kontak" className="bg-blue-700 hover:bg-blue-500 text-white font-extrabold py-2 rounded lg:my-5 my-2 w-1/2 shadow-lg">
+                                        <a href="#kontak" className="bg-[#204E62] hover:bg-[#405a54] text-white font-extrabold py-2 rounded lg:my-5 my-2 w-1/2 shadow-lg">
                                             Free Consultation
                                         </a>
 
-                                        <a href="#kontak" className="bg-white border border-blue-400 py-2 px-4 rounded text-black font-medium hover:bg-blue-400 hover:text-white w-1/2 lg:m-5 m-2 shadow-lg">
+                                        <a href="#kontak" className="bg-white border border-[#204E62] py-2 px-4 rounded text-black font-medium hover:bg-[#204E62] hover:text-white w-1/2 lg:m-5 m-2 shadow-lg">
                                             Learn More
                                         </a>
                                     </div>

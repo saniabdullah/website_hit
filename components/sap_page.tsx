@@ -77,7 +77,7 @@ const CarouselSap = ({ data }: CarouselSapProps) => {
                                         </span>
                                     </button>
                                     <div className="flex text-center justify-center md:justify-start">
-                                        <Link href="#kontak" className="bg-blue-700 hover:bg-blue-500 text-white font-extrabold py-2 rounded lg:my-5 my-2 w-2/3 md:w-1/2 shadow-lg">
+                                        <Link href="#kontak" className="bg-[#204E62] hover:bg-[#405a54] text-white font-extrabold py-2 rounded lg:my-5 my-2 w-2/3 md:w-1/2 shadow-lg">
                                             Start Your Journey
                                         </Link>
                                     </div>

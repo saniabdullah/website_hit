@@ -26,7 +26,7 @@ export default function Contact () {
             transition={{ duration: 0.6 }}
             >
                 <h1 className="lg:text-3xl text-xl py-2 font-extrabold mt-4">Start Your Journey With</h1>
-                <h3 className="lg:text-xl text-md py-2 font-extrabold text-blue-700 mb-5">Hit Digital Indonesia</h3>
+                <h3 className="lg:text-xl text-md py-2 font-extrabold mb-5">Hit Digital Indonesia</h3>
                 <form>
                     <div className="grid gap-3 grid-cols-3 my-3">
                         <div className="col-span-1">
@@ -78,7 +78,7 @@ export default function Contact () {
                                     type="text"
                                     className="peer block min-h-[auto] w-full rounded border border-gray-400 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none text-black dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"/>
                             </div>
-                            <button className="bg-blue-700 hover:bg-blue-500 text-white font-extrabold py-2 rounded my-4 lg:w-1/5 w-2/3 shadow-2xl" onClick={whatsapp}>
+                            <button className="bg-[#204E62] hover:bg-[#405a54] text-white font-extrabold py-2 rounded my-4 lg:w-1/5 w-2/3 shadow-2xl" onClick={whatsapp}>
                                 Submit
                             </button>
                         </div>
@@ -86,7 +86,7 @@ export default function Contact () {
                 </form>
 
                 <h1 className="flex lg:text-3xl md:text-3xl lg:mt-24 text-lg font-extrabold my-4 justify-between">Consult  your technology needs with us!</h1>
-                <h3 className="lg:text-xl text-md font-extrabold mb-5">Make <span className="text-blue-700">IT</span> Simple</h3>
+                <h3 className="lg:text-xl text-md font-extrabold mb-5">Make <span className="">IT</span> Simple</h3>
             </motion.div>
         </div>
     );

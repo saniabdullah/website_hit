@@ -15,7 +15,7 @@ const EpicorPage = () => {
                     className="h-full w-full object-cover p-2"
                 />
             </div>
-            <div className='bg-blue-950 text-white p-5 m-2 flex-auto rounded-md md:w-1/3'>
+            <div className='bg-[#204E62] text-white p-5 m-2 flex-auto rounded-md md:w-1/3'>
                 <h1 className='text-lg md:text-3xl lg:text-5xl'>Epicor Kinetik</h1>
                 <p className='text-xs md:text-sm lg:text-md pt-4 text-left'>Epicor is an ERP system for automating & integrating workflows with strong points in Manufacturing. Epicor helps companies to calculate daily production costs in every workers. So that effectiveness can be done.</p>
                 <div className='pt-4'>

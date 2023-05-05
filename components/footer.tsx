@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Footer() {
     return (
-        <footer className="bg-neutral-100 text-center dark:bg-neutral-600 dark:text-neutral-200 lg:text-left w-full">
+        <footer className="bg-[#204E62] text-white text-center dark:bg-neutral-600 dark:text-neutral-200 lg:text-left w-full">
             <div className="mx-16 py-10 text-center md:text-left">
                 <div className="grid-1 grid gap-8 lg:grid-cols-2">
                     
@@ -57,7 +57,7 @@ export default function Footer() {
                         </div>
                         <div className="mx-auto">
                             <h6
-                            className="mb-4 flex justify-start font-bold uppercase">
+                            className="mb-4 flex justify-center md:justify-start font-bold uppercase">
                                 Industry
                             </h6>
                             <p className="mb-2">
@@ -79,7 +79,7 @@ export default function Footer() {
                         </div>
                         <div className="mx-auto">
                             <h6
-                            className="mb-4 flex justify-start font-bold uppercase">
+                            className="mb-4 flex justify-center md:justify-start font-bold uppercase">
                                 Pages
                             </h6>
                             <p className="mb-2">

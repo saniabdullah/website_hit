@@ -10,7 +10,7 @@ type SecondSection = {
 
 const SecoundSectionSapPage = ({data} : SecondSection) => {
   return (
-    <div className="w-full lg:px-20 px-4 pb-10 md:pb-10 bg-neutral-100">
+    <div className="w-full lg:px-20 px-4 pb-10 md:pb-10 bg-[#EFF2F5]">
         <div className='flex flex-col md:flex-row md:my-10 py-5'>
             <div className='flex-auto w-full md:w-1/4'>
                 <img 
@@ -40,7 +40,7 @@ const SecoundSectionSapPage = ({data} : SecondSection) => {
                                 className="h-[100px] w-[100px] md:h-[150px] md:w-[150px] object-cover p-2 m-auto"
                             />
                         </div>
-                        <p className='bg-blue-950 m-2 py-1 px-2 rounded-sm text-white text-center'>{item.title}</p>
+                        <p className='bg-[#204E62] m-2 py-1 px-2 rounded-sm text-white text-center'>{item.title}</p>
                     </div> 
                 ))}
             </div>

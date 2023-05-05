@@ -57,10 +57,10 @@ const client_data = [
 ];
 
 const service_data =[
-  {img_url: "./images/it_consulting_red.png", title: "It Consulting", desc: "We provide the best advice to build your technology"},
-  {img_url: "./images/erp_solutions_red.png", title: "Erp Solutions", desc: "Providing a variety of ERP solutions based on your needs."},
-  {img_url: "./images/data_analisys_red.png", title: "Data Analytic", desc: "Business platform Intelligence to present dashboards and reports automatically"},
-  {img_url: "./images/software_dev_red.png", title: "Software Development", desc: "Experienced in designing and developing customized applications and mobile applications"}
+  {img_url: "./images/erp_solutions.png", title: "Erp Solutions", desc: "Providing a variety of ERP solutions based on your needs."},
+  {img_url: "./images/it_consulting.png", title: "It Consulting", desc: "We provide the best advice to build your technology"},
+  {img_url: "./images/data_analisys.png", title: "Data Analytic", desc: "Business platform Intelligence to present dashboards and reports automatically"},
+  {img_url: "./images/software_dev.png", title: "Software Development", desc: "Experienced in designing and developing customized applications and mobile applications"}
 ]
 
 const product_data = [
@@ -88,12 +88,12 @@ const gallery_data =[
 
 export default function Home() {
   return (
-    <main className={`flex min-h-screen flex-col items-center justify-between text-gray-600 ${font.className}`}>
+    <main className={`flex min-h-screen flex-col items-center justify-between text-[#204E62] ${font.className}`}>
         <Navbar />
         <Carousel data={carousel_data}/>
-        <Partnership data={partnership_data}/>
-        <Client data={client_data}/>
         <Service data={service_data}/>
+        <Client data={client_data}/>
+        <Partnership data={partnership_data}/>
         <Industries />
         <Product data={product_data}/>
         <Partners data={partners_data}/>
