@@ -80,7 +80,7 @@ const gallery_data =[
   {imgurl: "./images/photo_3.webp"},
 ]
 
-const query = groq`
+const query_carousel = groq`
   *[_type == "carousel"] {
     title,
     desc,
@@ -89,7 +89,7 @@ const query = groq`
 `
 
 export default async function Home() {
-  const carousel = await client.fetch(query);
+  const carousel = await client.fetch(query_carousel);
   console.log('carousel', carousel);
 
   return (

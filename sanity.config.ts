@@ -13,8 +13,8 @@ export default defineConfig({
   name: 'website_hit',
   title: 'Website Hit',
 
-  projectId,
-  dataset,
+  projectId: 'o00aen5e',
+  dataset: 'production',
 
   plugins: [
     deskTool(),

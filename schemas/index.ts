@@ -7,6 +7,7 @@ import screening from './screening'
 import plotSummary from './plotSummary'
 import plotSummaries from './plotSummaries'
 import carousel from './carousel'
+import serviceData from './serviceData'
 
 export const schemaTypes = [
   // Document types
@@ -14,6 +15,7 @@ export const schemaTypes = [
   // person,
   // screening,
   carousel,
+  serviceData
 
   // Other types
   // blockContent,
