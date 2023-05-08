@@ -28,14 +28,11 @@ const carousel_data = [
   {imgurl: "./images/image3.png", title: "IT Infrastructure", desc: "More than 10 years of experience managing infrastructure projects: internet network, server, CCTV"},
 ];
 
-const partnership_data = [
-  {img_parthership: "./images/sap.png"},
-  {img_parthership: "./images/odoo.png"},
-  {img_parthership: "./images/epicor.png"},
-  {img_parthership: "./images/kissflow.png"},
-  {img_parthership: "./images/micro.png"},
-  {img_parthership: "./images/huawei.png"},
-  {img_parthership: "./images/cloud.png"},
+const service_data =[
+  {img_url: "./images/erp_solutions.png", title: "Erp Solutions", desc: "Providing a variety of ERP solutions based on your needs."},
+  {img_url: "./images/it_consulting.png", title: "It Consulting", desc: "We provide the best advice to build your technology"},
+  {img_url: "./images/data_analisys.png", title: "Data Analytic", desc: "Business platform Intelligence to present dashboards and reports automatically"},
+  {img_url: "./images/software_dev.png", title: "Software Development", desc: "Experienced in designing and developing customized applications and mobile applications"}
 ];
 
 const client_data = [
@@ -50,12 +47,17 @@ const client_data = [
   {img_client:  "./images/prager.png"},
 ];
 
-const service_data =[
-  {img_url: "./images/erp_solutions.png", title: "Erp Solutions", desc: "Providing a variety of ERP solutions based on your needs."},
-  {img_url: "./images/it_consulting.png", title: "It Consulting", desc: "We provide the best advice to build your technology"},
-  {img_url: "./images/data_analisys.png", title: "Data Analytic", desc: "Business platform Intelligence to present dashboards and reports automatically"},
-  {img_url: "./images/software_dev.png", title: "Software Development", desc: "Experienced in designing and developing customized applications and mobile applications"}
-]
+
+const partnership_data = [
+  {img_parthership: "./images/sap.png"},
+  {img_parthership: "./images/odoo.png"},
+  {img_parthership: "./images/epicor.png"},
+  {img_parthership: "./images/kissflow.png"},
+  {img_parthership: "./images/micro.png"},
+  {img_parthership: "./images/huawei.png"},
+  {img_parthership: "./images/cloud.png"},
+];
+
 
 const product_data = [
   {imgurl: "./images/Weighbridge.png", title: "Weighbridge", sub_title: 'Our Own Product', desc: "Integrated Application to ERP System. Simplify the process of tracking data by integrating weighing equipment in the field and ERP system. Now, real time data can be accesed in the back office."},
@@ -88,21 +90,69 @@ const query_carousel = groq`
   }
 `
 
+const query_services = groq`
+  *[_type == "services"] {
+    title,
+    desc,
+    "img_url": image.asset->url
+  }
+`
+
+const query_client = groq`
+  *[_type == "clients"] {
+    "img_client": image.asset->url
+  }
+`
+
+const query_partnership = groq`
+  *[_type == "partnership"] {
+    "img_parthership": image.asset->url
+  }
+`
+
+const query_product = groq`
+  *[_type == "product"] {
+    title,
+    desc,
+    sub_title,
+    "imgurl": image.asset->url
+  }
+`
+
+const query_partner = groq`
+  *[_type == "partner"] {
+    desc,
+    "img_url": image.asset->url
+  }
+`
+
+const query_gallery = groq`
+  *[_type == "gallery"] {
+    "imgurl": image.asset->url
+  }
+`
+
 export default async function Home() {
   const carousel = await client.fetch(query_carousel);
-  console.log('carousel', carousel);
+  const services = await client.fetch(query_services);
+  const clients = await client.fetch(query_client);
+  const partnership = await client.fetch(query_partnership);
+  const product = await client.fetch(query_product);
+  const partner = await client.fetch(query_partner);
+  const gallery = await client.fetch(query_gallery);
+  console.log('gallery', gallery);
 
   return (
     <main className={`flex min-h-screen flex-col items-center justify-between text-[#204E62] ${font.className}`}>
         <Navbar />
         <Carousel data={carousel}/>
-        <Service data={service_data}/>
-        <Client data={client_data}/>
-        <Partnership data={partnership_data}/>
+        <Service data={services}/>
+        <Client data={clients}/>
+        <Partnership data={partnership}/>
         <Industries />
-        <Product data={product_data}/>
-        <Partners data={partners_data}/>
-        <Gallery data={gallery_data}/>
+        <Product data={product}/>
+        <Partners data={partner}/>
+        <Gallery data={gallery}/>
         <Contact />
         <Footer />
     </main>
