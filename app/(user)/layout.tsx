@@ -1,5 +1,5 @@
 import Navbar from '@/components/navbar'
-import './globals.css'
+import '../globals.css'
 import Carousel from '@/components/carousel'
 
 export const metadata = {

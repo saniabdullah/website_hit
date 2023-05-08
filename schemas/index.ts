@@ -6,17 +6,19 @@ import person from './person'
 import screening from './screening'
 import plotSummary from './plotSummary'
 import plotSummaries from './plotSummaries'
+import carousel from './carousel'
 
 export const schemaTypes = [
   // Document types
-  movie,
-  person,
-  screening,
+  // movie,
+  // person,
+  // screening,
+  carousel,
 
   // Other types
-  blockContent,
-  plotSummary,
-  plotSummaries,
-  castMember,
-  crewMember,
+  // blockContent,
+  // plotSummary,
+  // plotSummaries,
+  // castMember,
+  // crewMember,
 ]

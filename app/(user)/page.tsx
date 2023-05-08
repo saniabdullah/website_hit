@@ -13,14 +13,8 @@ import Gallery from '@/components/gallery'
 
 import { Poppins } from 'next/font/google'
 import { motion } from 'framer-motion';
-import Testing from '@/components/testing'
-import CarouselSap from '@/components/sap_page'
-import SecoundSectionSapPage from '@/components/sap_second_page'
-import EpicorPage from '@/components/epicor_page'
-import EpicorSecondPage from '@/components/epicor_second_page'
-import MicrostrategyPage from '@/components/microstrategy_page'
-import OdooPage from '@/components/odoo_page'
-import OdooSecondPage from '@/components/odoo_second_page'
+import { client } from '@/lib/sanity.client'
+import { groq } from 'next-sanity'
 
 const font = Poppins({
   subsets: ['latin'],
@@ -86,11 +80,22 @@ const gallery_data =[
   {imgurl: "./images/photo_3.webp"},
 ]
 
-export default function Home() {
+const query = groq`
+  *[_type == "carousel"] {
+    title,
+    desc,
+    "imgurl": image.asset->url
+  }
+`
+
+export default async function Home() {
+  const carousel = await client.fetch(query);
+  console.log('carousel', carousel);
+
   return (
     <main className={`flex min-h-screen flex-col items-center justify-between text-[#204E62] ${font.className}`}>
         <Navbar />
-        <Carousel data={carousel_data}/>
+        <Carousel data={carousel}/>
         <Service data={service_data}/>
         <Client data={client_data}/>
         <Partnership data={partnership_data}/>

@@ -3,12 +3,13 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from 'framer-motion';
+import { client } from "@/lib/sanity.client";
 
 type CarouselProps = {
     data: {
-      imgurl: string;
-      title: string;
-      desc: string;
+        imgurl: string;
+        title: string;
+        desc: string;
     }[];
 };
   
