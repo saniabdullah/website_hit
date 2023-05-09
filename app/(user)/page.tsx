@@ -1,3 +1,5 @@
+"use client"
+
 import Image from 'next/image'
 import Carousel from '@/components/carousel'
 import Navbar from '@/components/navbar'

@@ -1,3 +1,5 @@
+"use client"
+
 import Footer from "@/components/footer";
 import KissflowPage from "@/components/kissflow_page";
 import KissflowSecondPage from "@/components/kissflow_second_page";
