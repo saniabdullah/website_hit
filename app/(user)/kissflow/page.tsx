@@ -8,6 +8,9 @@ import NavbarSecond from "@/components/navbar_second";
 import { Poppins } from 'next/font/google'
 import { client } from '@/lib/sanity.client'
 import { groq } from 'next-sanity'
+import { useClient } from 'sanity'
+import { useState, useEffect } from "react";
+
 
 
 const font = Poppins({
@@ -44,9 +47,9 @@ const query_item_kissflow = groq`
 `
 
 export default async function Home() {
-    const carousel_kissflow = await client.fetch(query_carousel_kissflow);
-    const item_kissflow = await client.fetch(query_item_kissflow);
-
+    const carousel_kissflow = await client.fetch(query_carousel_kissflow, { next: { revalidate: 6 } });
+    const item_kissflow = await client.fetch(query_item_kissflow, { next: { revalidate: 6 } });
+    console.log("data", item_kissflow)
     return (
         <main className={`flex min-h-screen flex-col items-center justify-between text-[#204E62] ${font.className}`}>
             <NavbarSecond />
