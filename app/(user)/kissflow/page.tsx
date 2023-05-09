@@ -4,6 +4,8 @@ import KissflowSecondPage from "@/components/kissflow_second_page";
 import MicrostrategyPage from "@/components/microstrategy_page";
 import NavbarSecond from "@/components/navbar_second";
 import { Poppins } from 'next/font/google'
+import { client } from '@/lib/sanity.client'
+import { groq } from 'next-sanity'
 
 
 const font = Poppins({
@@ -22,12 +24,32 @@ const kissflow_second_data = [
     {imgurl: "./images/kissflow_second_page_4.png", title: "Plays well with other software", desc: "Connect Kissflow instantly with other essential third-party tools using seamless API integration", list: ['G Suite', 'Office 365', 'Dropbox']}
 ];
 
-export default function Home() {
+const query_carousel_kissflow = groq`
+  *[_type == "carousel_kissflow"] {
+    title,
+    desc,
+    "imgurl": image.asset->url
+  }
+`
+
+const query_item_kissflow = groq`
+  *[_type == "item_kissflow"] {
+    title,
+    desc,
+    "imgurl": image.asset->url,
+    list
+  }
+`
+
+export default async function Home() {
+    const carousel_kissflow = await client.fetch(query_carousel_kissflow);
+    const item_kissflow = await client.fetch(query_item_kissflow);
+
     return (
         <main className={`flex min-h-screen flex-col items-center justify-between text-[#204E62] ${font.className}`}>
             <NavbarSecond />
-            <KissflowPage data={carousel_kissflow_data}/>
-            <KissflowSecondPage data={kissflow_second_data}/>
+            <KissflowPage data={carousel_kissflow}/>
+            <KissflowSecondPage data={item_kissflow}/>
             <Footer />
         </main>
     )

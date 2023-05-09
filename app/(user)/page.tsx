@@ -140,7 +140,6 @@ export default async function Home() {
   const product = await client.fetch(query_product);
   const partner = await client.fetch(query_partner);
   const gallery = await client.fetch(query_gallery);
-  console.log('gallery', gallery);
 
   return (
     <main className={`flex min-h-screen flex-col items-center justify-between text-[#204E62] ${font.className}`}>
