@@ -1,4 +1,3 @@
-"use client"
 
 import Image from 'next/image'
 import Carousel from '@/components/carousel'
@@ -17,6 +16,8 @@ import { Poppins } from 'next/font/google'
 import { motion } from 'framer-motion';
 import { client } from '@/lib/sanity.client'
 import { groq } from 'next-sanity'
+
+import { getCarouselData } from '@/sanity-utils'
 
 const font = Poppins({
   subsets: ['latin'],
@@ -143,10 +144,15 @@ export default async function Home() {
   const partner = await client.fetch(query_partner);
   const gallery = await client.fetch(query_gallery);
 
+  const carousel2 = await getCarouselData();
+  console.log('carousel', carousel);
+  console.log('carousel2', carousel2);
+
+
   return (
     <main className={`flex min-h-screen flex-col items-center justify-between text-[#204E62] ${font.className}`}>
         <Navbar />
-        <Carousel data={carousel}/>
+        <Carousel data={carousel2}/>
         <Service data={services}/>
         <Client data={clients}/>
         <Partnership data={partnership}/>
