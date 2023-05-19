@@ -5,16 +5,16 @@ import {visionTool} from '@sanity/vision'
 import { schemaTypes } from './schemas'
 import StudioNavbar from './components/studioNavbar';
 
-// const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!;
-// const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET!;
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!;
+const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET!;
 
 export default defineConfig({
   basePath: "/studio",
   name: 'website_hit',
   title: 'Website Hit',
 
-  projectId: 'o00aen5e',
-  dataset: 'production',
+  projectId,
+  dataset,
 
   plugins: [
     deskTool(),

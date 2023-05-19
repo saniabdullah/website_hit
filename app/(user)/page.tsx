@@ -17,8 +17,6 @@ import { motion } from 'framer-motion';
 import { client } from '@/lib/sanity.client'
 import { groq } from 'next-sanity'
 
-import { getCarouselData } from '@/sanity-utils'
-
 const font = Poppins({
   subsets: ['latin'],
   weight: '400'
@@ -143,11 +141,6 @@ export default async function Home() {
   const product = await client.fetch(query_product);
   const partner = await client.fetch(query_partner);
   const gallery = await client.fetch(query_gallery);
-
-  const carousel2 = await getCarouselData();
-  console.log('carousel', carousel);
-  console.log('carousel2', carousel2);
-
 
   return (
     <main className={`flex min-h-screen flex-col items-center justify-between text-[#204E62] ${font.className}`}>
