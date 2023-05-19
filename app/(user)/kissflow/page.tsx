@@ -29,32 +29,49 @@ const kissflow_second_data = [
     {imgurl: "./images/kissflow_second_page_4.png", title: "Plays well with other software", desc: "Connect Kissflow instantly with other essential third-party tools using seamless API integration", list: ['G Suite', 'Office 365', 'Dropbox']}
 ];
 
-const query_carousel_kissflow = groq`
-  *[_type == "carousel_kissflow"] {
-    title,
-    desc,
-    "imgurl": image.asset->url
-  }
-`
+// const query_carousel_kissflow = groq`
+//   *[_type == "carousel_kissflow"] {
+//     title,
+//     desc,
+//     "imgurl": image.asset->url
+//   }
+// `
 
-const query_item_kissflow = groq`
-  *[_type == "item_kissflow"] {
-    title,
-    desc,
-    "imgurl": image.asset->url,
-    list
-  }
-`
+// const query_item_kissflow = groq`
+//   *[_type == "item_kissflow"] {
+//     title,
+//     desc,
+//     "imgurl": image.asset->url,
+//     list
+//   }
+// `
 
-export default async function Home() {
-    const carousel_kissflow = await client.fetch(query_carousel_kissflow, { next: { revalidate: 6 } });
-    const item_kissflow = await client.fetch(query_item_kissflow, { next: { revalidate: 6 } });
+export const data = async () => {
+  const query_item_kissflow = groq`
+    *[_type == "item_kissflow"] {
+      title,
+      desc,
+      "imgurl": image.asset->url,
+      list
+    }
+  `
+  const item_kissflow = await client.fetch(query_item_kissflow);
+  console.log("data2", item_kissflow)
+
+  return {
+    item_kissflow
+  }
+}
+
+export default async function Home({item_kissflow}: any) {
+    // const carousel_kissflow = await client.fetch(query_carousel_kissflow, { next: { revalidate: 6 } });
+    // const item_kissflow = await client.fetch(query_item_kissflow, { next: { revalidate: 6 } });
     console.log("data", item_kissflow)
     return (
         <main className={`flex min-h-screen flex-col items-center justify-between text-[#204E62] ${font.className}`}>
             <NavbarSecond />
-            <KissflowPage data={carousel_kissflow}/>
-            <KissflowSecondPage data={item_kissflow}/>
+            <KissflowPage data={carousel_kissflow_data}/>
+            {/* <KissflowSecondPage data={item_kissflow}/> */}
             <Footer />
         </main>
     )
