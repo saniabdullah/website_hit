@@ -152,7 +152,7 @@ export default async function Home() {
   return (
     <main className={`flex min-h-screen flex-col items-center justify-between text-[#204E62] ${font.className}`}>
         <Navbar />
-        <Carousel data={carousel2}/>
+        <Carousel data={carousel}/>
         <Service data={services}/>
         <Client data={clients}/>
         <Partnership data={partnership}/>
